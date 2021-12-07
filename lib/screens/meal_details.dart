@@ -4,6 +4,8 @@ import '../dummydata/dummy_data.dart';
 class MealDetails extends StatelessWidget {
   static const routeName = "/single-meal";
 
+  const MealDetails({Key? key}) : super(key: key);
+
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 15.0),

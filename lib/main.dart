@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mealapp/screens/meal_details.dart';
-import '../screens/categories_screen.dart';
+import 'package:mealapp/screens/tab_screen.dart';
 import '../screens/category_meal.dart';
 
 void main() {
-  runApp(MealApp());
+  runApp(const MealApp());
 }
 
 class MealApp extends StatelessWidget {
+  const MealApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +30,7 @@ class MealApp extends StatelessWidget {
             ),
       ),
       routes: {
-        '/': (ctx) => CategoriesScreen(),
+        '/': (ctx) => TabScreen(),
         CategoryMeal.routeName: (ctx) => CategoryMeal(),
         MealDetails.routeName: (ctx) => MealDetails(),
       },
