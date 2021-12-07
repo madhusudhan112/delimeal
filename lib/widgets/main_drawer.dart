@@ -23,24 +23,35 @@ class MainDrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.all(20.0),
-            height: 120,
-            width: double.infinity,
-            alignment: Alignment.centerLeft,
-            color: Theme.of(context).accentColor,
-            child: Text(
-              "Cooking App",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w900,
-                color: Theme.of(context).primaryColor,
-              ),
-            ),
-          ),
+              padding: const EdgeInsets.all(20.0),
+              height: 120,
+              width: double.infinity,
+              alignment: Alignment.centerLeft,
+              color: Theme.of(context).accentColor,
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.restaurant_menu_rounded,
+                    size: 40,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Deli Meal",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                ],
+              )),
           const SizedBox(
             height: 20,
           ),
           buildListTile("Meal", Icons.restaurant),
+          const Divider(),
           buildListTile("Filters", Icons.settings),
         ],
       ),
